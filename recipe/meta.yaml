@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 39992816c43db900d37371cd8cac0801fecda7bbf9c0c1e524c5ce357d6512ac
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vvv  --no-deps"
   noarch: python
 
 requirements:
-  build:
-    - python >=3
+  host:
+    - python {{ python_min }}
     - pip
 
   run:
-    - python >=3
+    - python >={{ python_min }}
     - pandas
     - numpy
 
@@ -31,6 +31,7 @@ test:
     - pytrackmate
   requires:
     - nose
+    - python {{ python_min }}
 
 about:
   home: https://github.com/hadim/pytrackmate/
