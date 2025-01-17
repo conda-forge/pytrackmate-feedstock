@@ -18,7 +18,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-
+    - setuptools
   run:
     - python >={{ python_min }}
     - pandas
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/hadim/pytrackmate/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: 'Import Trackmate XML files in Python as Pandas dataframe.'
   license_family: BSD
