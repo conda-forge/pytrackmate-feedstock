@@ -1,0 +1,48 @@
+context:
+  name: pytrackmate
+  version: 1.2.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 39992816c43db900d37371cd8cac0801fecda7bbf9c0c1e524c5ce357d6512ac
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vvv  --no-deps
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - pandas
+    - numpy
+
+tests:
+  - python:
+      imports:
+        - pytrackmate
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - nose
+        - python ${{ python_min }}.*
+    script:
+      - nosetests
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Import Trackmate XML files in Python as Pandas dataframe.
+  homepage: https://github.com/hadim/pytrackmate/
+
+extra:
+  recipe-maintainers:
+    - hadim
