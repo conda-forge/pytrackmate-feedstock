@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytrackmate-fee
 
 Home: https://github.com/hadim/pytrackmate/
 
-Package license: BSD-3-Clause
+Package license: MIT
 
 Summary: Import Trackmate XML files in Python as Pandas dataframe.
 
