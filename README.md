@@ -1,7 +1,7 @@
 About pytrackmate-feedstock
 ===========================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tmpmib_7s_u-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytrackmate-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/hadim/pytrackmate/
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tmpmib_7s_u-feedstock?branchName=main">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4960&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytrackmate-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -144,7 +144,4 @@ Feedstock Maintainers
 =====================
 
 * [@hadim](https://github.com/hadim/)
-
-
-<!-- dummy commit to enable rerendering -->
 
